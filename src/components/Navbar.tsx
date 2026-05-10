@@ -4,16 +4,16 @@ import { X } from 'lucide-react';
 import logo from '../images/second logoo oz.svg';
 
 const leftNavLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about' },
   { label: 'Oz Menu', href: '/menu' },
-  { label: 'Foundation', href: '/foundation' },
+  { label: 'Order Now', href: '/menu' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Location', href: '/location' },
 ];
 
 const rightNavLinks = [
-  { label: 'Gallery', href: '/gallery' },
-  { label: 'Order Now', href: '/menu' },
-  { label: 'Location', href: '/location' },
+  { label: 'Home', href: '/' },
+  { label: 'Foundation', href: '/foundation' },
+  { label: 'About Us', href: '/about' },
   { label: 'Contact Us', href: '/contact' },
 ];
 
@@ -135,11 +135,11 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        } bg-white border-t border-gray-100`}
+        className={`lg:hidden transition-all duration-300 ${
+          open ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        } bg-white border-t border-gray-100 overflow-y-auto`}
       >
-        <nav className="px-4 py-3 flex flex-col gap-1">
+        <nav className="px-4 py-3 flex flex-col gap-1 pb-6">
           {[...leftNavLinks, ...rightNavLinks].map((link) => {
             // Don't highlight 'Order Now' even if on menu page (it's a CTA, not a nav item)
             const isActive = link.label !== 'Order Now' && location.pathname === link.href;
@@ -148,7 +148,7 @@ export default function Navbar() {
                 key={link.href}
                 to={link.href}
                 onClick={() => setOpen(false)}
-                className={`text-left px-2 py-3 text-sm font-medium transition-all border-b-2 ${
+                className={`text-left px-3 py-3 text-base font-medium transition-all border-b-2 ${
                   isActive
                     ? 'text-[#dc2626] border-[#dc2626]'
                     : 'text-gray-700 hover:text-gray-900 border-transparent'
