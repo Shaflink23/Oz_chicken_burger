@@ -1,12 +1,20 @@
+import { useRef, useEffect } from 'react';
 import uberEatsLogo from '../images/uber-eats-seeklogo.png';
 import doordashLogo from '../images/doordash-logo-0.webp';
 import grubhubLogo from '../images/grubhub-vector-logo.svg';
-import burgerImage from '../images/ZXDPWRF.png';
+import burgerImage from '../images/8cef5b36-5eb9-45a3-a115-0082d46b6002.png';
 import heroImage from '../images/6f54508e-6b25-4dc6-995e-18316f09e00b.jpg';
 import ozVideo from '../videos/oz vid.mp4';
 import './Home.css';
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.75;
+    }
+  }, []);
   return (
     <>
       {/* Hero Section */}
@@ -16,6 +24,7 @@ export default function Home() {
     >
       {/* Background Video */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
