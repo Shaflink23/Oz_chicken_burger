@@ -58,7 +58,7 @@ export default function Home() {
             </h2>
             
             <p className="text-gray-100 text-sm sm:text-base lg:text-lg leading-relaxed tracking-wide max-w-lg mb-6 drop-shadow-md">
-              We bring you creme da la creme of burgers at affordable prices. Are you dreaming of the best cheeseburgers in town? The kind that makes your tastebuds tango?
+              The Best Chicken Burger at the most affordable price.
             </p>
 
             {/* Delivery Section */}
