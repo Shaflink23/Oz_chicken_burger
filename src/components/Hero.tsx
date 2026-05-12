@@ -53,7 +53,7 @@ export default function Hero() {
             </h2>
             
             <p className="text-gray-200 text-sm sm:text-base leading-relaxed tracking-wide max-w-lg mb-6">
-              We bring you creme da la creme of burgers at affordable prices. Are you dreaming of the best cheeseburgers in town? The kind that makes your tastebuds tango?
+              The Best Chicken Burger at the most affordable price.
             </p>
             
             <button

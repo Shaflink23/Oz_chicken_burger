@@ -116,6 +116,14 @@ export default function Navbar() {
             })}
           </nav>
 
+          {/* Mobile Order Now Button - Only visible on mobile */}
+          <a
+            href="tel:+12135456412"
+            className="lg:hidden px-4 py-2 bg-[#dc2626] text-white text-xs font-bold rounded-full hover:bg-red-700 active:scale-95 transition-all duration-200 shadow-md"
+          >
+            Order Now
+          </a>
+
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition"
